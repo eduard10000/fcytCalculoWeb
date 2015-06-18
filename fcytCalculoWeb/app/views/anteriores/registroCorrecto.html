@@ -1,0 +1,64 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Plataforma virtual de CDeI - Registro</title>
+<link rel="stylesheet" media="screen" href="../css/estilos.css">
+</head>
+<body>
+<div id="headerAdjust"></div>
+<header>
+</header>
+<aside id="menuIzq">
+	<div class="menuIzqOpciones">
+    	<div>
+        	<img src="../img/circulocolor.png" alt="desactivado">
+        	<a href="inicio.html"> Inicio</a>
+        </div>
+        <div>
+        	<img src="../img/circulocolor.png" alt="desactivado">
+        	<a  href="javascript:mostrarOcultar('iniciarSesion');"> Iniciar Sesión</a>
+            <div id="iniciarSesion" style="display:none" >
+                <p>Usuario:</p>
+                <input size="21" type="text" name="ingresoUsuario" id="ingresoUsuario" placeholder="Ingrese su usuario">
+                <p>Contraseña:</p>
+                <input size="21" type="password" name="ingresocontrasenia" id="ingresocontrasenia" placeholder="Ingrese su Contraseña" >
+                <button>Ingresar</button>
+            </div>
+        </div>
+        <div>
+        	<img src="../img/circuloverde.png" alt="desactivado">
+        	<a href="registro.html"> Registrarse</a>
+        </div>
+        <div>
+        	<img src="../img/circulocolor.png" alt="activado">
+        	<a href="recuperarContrasenia.html"> Recuperar contraseña</a>
+        </div>
+    </div>
+</aside>
+
+<section id="central">
+	<button onclick="fullCentral(this);">Expandir contenido</button>
+	<div class="titulo"> 
+    	Registro Correcto
+	</div>
+	<div class="registroCorrecto">
+    	<div class="texto">
+        Su registro se ha procesado satisfactoriamente, en breve el administrador lo dará de alta en el sistema.
+        </div>
+        <div class="imagen">
+        	<img src="../img/registroCorrecto.png" alt="registro correcto">
+        </div>
+    </div>
+
+</section>
+
+<aside id="menuDer">
+</aside>
+
+
+<footer>
+</footer>
+</body>
+<script type="text/javascript" src="../js/efectos.js"></script>
+</html>

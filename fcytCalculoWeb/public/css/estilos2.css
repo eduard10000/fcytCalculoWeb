@@ -1,0 +1,237 @@
+@charset "utf-8";
+/* CSS Document */
+
+/*auxiliares*/
+
+.oculto
+{
+	display:none;
+}
+
+.margen
+{
+	margin-top:0.7em;
+	margin-bottom:0.7em;
+}
+
+/* generales*/
+
+body
+{
+	background-color: #CCCCCC;
+}
+
+header {
+	
+	font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+	font-size: 26px;
+	background-color: #A4BAD2;
+	width:100%;
+	border:none;
+	text-align:center;
+}
+
+/* administración de ejercicios */
+
+#ejerciciosNuevoEjercicioBoton
+{
+	position:relative;
+	left:47em;
+	top:1em;
+}
+
+#ejerciciosNuevoEjercicio
+{
+	width:60%;
+	height:17em;
+	text-align:center;
+	margin-top:1em;
+	margin-left:20%;
+	margin-right:20%;
+	background-color:#75BC1D;
+	border-style:solid;
+	border-color:#FFF;
+}
+
+.nuevoEjercIzq
+{
+	margin-top:1em;
+	margin-left:0.7em;
+	position:relative;
+	float:left;
+	width:35%;
+	background-color:#75BC1D;
+	height:12em;
+}
+
+.nuevoEjercDer
+{
+	position:relative;
+	float:right;
+	width:62%;
+	right:0.75em;
+	height:12em;
+	margin-top:1em;
+}
+
+.nuevoEjercDer .izq
+{
+	position:relative;
+	float:left;
+	width:60%;
+	margin-top:0.7em;
+	margin-bottom:0.7em;
+	padding-top:1em;
+	font-size:18px;
+	color:#FFF;
+}
+
+.nuevoEjercDer .izq input
+{
+	margin-top:0em;
+	margin-bottom:0em;
+	float:right;
+	position:relative;
+	left:3em;
+}
+
+.previsualizarEjercicio
+{
+	margin-top:0.7em;
+	margin-left:0.7em;
+	max-width:19em;
+}
+
+#EjercNuevoGuardar
+{
+	position:relative;
+	left:12em;
+	top:1.5em;
+}
+
+#EjercNuevoCancelar
+{
+	position:relative;
+	left:7em;
+	top:1.5em;
+}
+.mostrarEjercicio
+{
+	width:20em;
+	background-color:#ABC2D9;
+	padding:0.5em;
+	float:left;
+	margin:0.35em;
+}
+
+.contenedorEjercicios
+{
+	clear:both;
+	margin-top:3em;
+}
+
+.EjerciciosFiltrosOrden
+{
+	margin-top:1em;
+}
+
+.EjerciciosFiltrosOrden div
+{
+	float:left;
+}
+
+.EjerciciosFiltrosOrden div span
+{
+	margin-left:10em;
+}
+
+.EjerciciosFiltrosOrden div input,.EjerciciosFiltrosOrden div select
+{
+	margin-left:2em;
+}
+
+.ejerciciosInformacionEstilo
+{
+	background-color:#FFF;
+	border-color:#CCC;
+	border-style:solid;
+	padding:0.5em;
+}
+
+#ejercicioEliminar
+{
+	position:relative;
+	bottom:7em;
+	left:17em;
+}
+
+#ejercicioGuardar
+{
+	position:relative;
+	bottom:3em;
+	left:15em;
+}
+				
+/* Admninistrador de autoevaluaciones */				
+.mostrarEjercAniadir
+{
+	clear:left
+}
+
+.ejerAniadir
+{
+	float:left;
+	width:33%;
+}
+
+#nuevAutoevaluacion
+{
+	width:98%;
+	height:17em;
+	text-align:center;
+	margin-top:1em;
+	margin-left:1%;
+	margin-right:1%;
+	background-color:#75BC1D;
+	border-style:solid;
+	border-color:#FFF;
+	overflow:auto;
+}
+
+#nuevAutoevaluacionBoton
+{
+	position:relative;
+	text-align:center;
+	left:50%;
+	top:50%;
+}
+
+.contenedorAutoevaluaciones{
+	clear:both;
+}
+
+
+.autoevaluacionInf
+{
+	float:left;
+	width:16em;;
+}
+
+.autoevaluacion
+{
+	background-color:#9CF;
+	height:22em;
+	overflow:auto;
+}
+
+.autoevaluacion .ejerciciosInformacionEstilo
+{
+	width:14em;
+}
+
+.ejerc
+{
+	float:left;
+	margin-left:1em;
+	margin-right:1em;
+}

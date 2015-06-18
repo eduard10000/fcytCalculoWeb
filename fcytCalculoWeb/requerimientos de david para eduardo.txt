@@ -1,0 +1,3 @@
+en admTemas necesito:
+- pido objeto json admTemas a traves de la request "getTemas" linea 79
+- envio por post crearTema con el par de valores temaNuevo:nombreNuevoTema, informar si el nombre es valido caso contrario informar porque es invalido linea 196

@@ -1,0 +1,374 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Plataforma virtual de CDeI - Inicio</title>
+<link rel="stylesheet" media="screen" href="../css/estilos.css">
+<link rel="stylesheet" media="screen" href="../css/jquery-ui.css" >
+<link rel="stylesheet" media="screen" href="../css/jquery.dataTables.css" >
+<link rel="stylesheet" media="screen" href="../css/dataTables.colVis.css" >
+<link rel="stylesheet" media="screen" href="../css/dataTables.keyTable.css" >
+<link rel="stylesheet" media="screen" href="../css/dataTables.tableTools.css" >
+<link rel="stylesheet" media="screen" href="../css/dataTables.colReorder.css" >
+<script type="text/javascript" language="javascript" src="../js/jquery-1.10.2.min.js"></script>
+<script type="text/javascript" language="javascript" src="../js/jquery.dataTables.js"></script>
+<script type="text/javascript" language="javascript" src="../js/dataTables.colReorder.js"></script>
+<script type="text/javascript" language="javascript" src="../js/dataTables.colVis.js"></script>
+<script type="text/javascript" language="javascript" src="../js/dataTables.fixedColumns.js"></script>
+<script type="text/javascript" language="javascript" src="../js/dataTables.keyTable.js"></script>
+<script type="text/javascript" language="javascript" src="../js/dataTables.tableTools.js"></script>
+</head>
+<body>
+<div id="headerAdjust"></div>
+<header>
+</header>
+
+<aside id="menuIzq">
+	<div class="menuIzqOpciones">
+    	<div>
+        	<img src="../img/circuloverde.png" alt="activado">
+        	<a href="inicio.html"> Inicio</a>
+        </div>
+    	<div>
+        	<img src="../img/circulocolor.png" alt="desactivado">
+        	<a href="enviarMensaje.html">Enviar Mensaje</a>
+        </div>
+    	<div>
+        	<img src="../img/circulocolor.png" alt="desactivado">
+        	<a href="usuariosNuevos.html">Usuarios Nuevos</a>
+        </div>			
+    	<div>
+        	<img src="../img/circulocolor.png" alt="desactivado">
+        	<a href="temas.html"> Temas</a>
+        </div>
+    	<div>
+        	<img src="../img/circulocolor.png" alt="desactivado">
+        	<a href="ejercicios.html"> Ejercicios</a>
+        </div>
+    	<div>
+        	<img src="../img/circulocolor.png" alt="desactivado">
+        	<a href="autoevaluaciones.html"> Autoevaluaciones</a>
+        </div>
+    </div>
+	<div class="menuIzqOpcionesAdm">Administraci�n</div>
+	<div class="menuIzqOpciones">
+    	<div>
+        	<img src="../img/circulocolor.png" alt="desactivado">
+        	<a href="admUsuarios.html">Usuarios</a>
+        </div>			
+    	<div>
+        	<img src="../img/circulocolor.png" alt="desactivado">
+        	<a href="admTemas.html"> Temas</a>
+        </div>
+    	<div>
+        	<img src="../img/circulocolor.png" alt="desactivado">
+        	<a href="admEjercicios.html"> Ejercicios</a>
+        </div>
+    	<div>
+        	<img src="../img/circulocolor.png" alt="desactivado">
+        	<a href="admAutoevaluaciones.html"> Autoevaluaciones</a>
+        </div>
+    	<div>
+        	<img src="../img/circulocolor.png" alt="desactivado">
+        	<a href="admEventos.html"> Eventos</a>
+        </div>
+		<div>
+        	<img src="../img/circulocolor.png" alt="desactivado">
+        	<a href="estadisticas.html"> Estadisticas</a>
+        </div>
+    	<div>
+        	<img src="../img/circulocolor.png" alt="desactivado">
+        	<a href="reiniciar.html"> Reiniciar A�o</a>
+        </div>
+		<div>
+        	<img src="../img/circulocolor.png" alt="desactivado">
+        	<a href="backup.html"> BackUp</a>
+        </div>
+    </div>
+</aside>
+<section id="central">
+	<button onclick="fullCentral(this);">Expandir contenido</button>
+	<div class="titulo"> 
+    	Adm temas
+	</div>
+<!--<div id="ocultarColList">
+	Ocultar columnas:
+	<a class="toggle-vis" data-column="0">+</a> - 
+	<a class="toggle-vis" data-column="1">Name</a> - 
+	<a class="toggle-vis" data-column="2">Position</a> - 
+	<a class="toggle-vis" data-column="3">Office</a> - 
+	<a class="toggle-vis" data-column="4">Salary</a>
+</div> -->
+		
+
+		
+<table id="lista" class="display" cellspacing="0" width="100%">
+        <thead>
+            <tr>
+                <th></th>
+                <th>nombreTema</th>
+                <th>modificadoPor</th>
+                <th>fechaModificacion</th>
+                <th>Orden</th>
+                <th></th>
+                <th></th>
+            </tr>
+        </thead>
+ 
+        <tfoot>
+            <tr>
+                <th></th>
+                <th>nombreTema</th>
+                <th>modificadoPor</th>
+                <th>fechaModificacion</th>
+                <th>Orden</th>
+                <th></th>
+                <th></th>
+                
+            </tr>
+        </tfoot>
+    </table>
+</section>
+<aside id="menuDer">
+	<div id="infUsuario">
+		<div id="cerrarSesion">
+			<button name="cerrar session" type="submit" >Cerrar sesion</button>
+		</div>
+		<img id="imgPerfil" src="../img/imagenDefault.jpg" alt="">
+        <div class="apellido">
+        	<a id="apeNom" href="perfil.html">Apellido, Nombre</a>
+        </div>
+	</div>
+	<div>
+		<a id="usuariosNuevos" href="usuariosNuevos.html" class="menuusuariosnuevos">Existen usuarios Nuevos</a>
+    </div>
+	<div id="calendario"></div>
+	<div id="infEvento">informacion de evento c</div>
+	<div id="ultUsuariosCon">Ultimos usuarios conectados</div>
+	<div id="ultUsuariosConLista">
+		Apellido,Nombre<br/>
+		Apellido,Nombre<br/>
+		Apellido,Nombre<br/>
+		Apellido,Nombre<br/>
+		Apellido,Nombre<br/>
+		Apellido,Nombre<br/>
+		Apellido,Nombre<br/>
+	</div>
+
+</aside>
+
+
+<footer>
+</footer>
+</body>
+<script type="text/javascript" src="../js/efectos.js"></script>
+<script type="text/javascript">
+/* Formatting function for row details - modify as you need */
+function format ( d ) {
+	//console.log(d.items[0].idItem);
+	n=d.items.length;
+	tabla="<table class=admItemsTemas><th>Nombre Item</th><th>Modificado por</th><th>fecha</th><th>Previsualizar</th><th>Orden</th><th></th><th></th>";
+	for(i=0;i<n;i++)
+	{
+	 tabla+="<tr><td>"+d.items[i].nombreItem+"</td><td>"+d.items[i].modificadoPor+"</td><td>"+d.items[i].fechaModificacion+"</td><td>"+'<a href=getContentItem?idItem='+d.items[i].idItem+'+" target="_blank" onClick="window.open(this.href, this.target, 'width=300,height=400'); return false;"> <div class=previsualizar></div></a></td><td>' +d.items[i].ordenItem+"</td><td><div class=arriba></div><div class=abajo></div></td><td><div class=eliminarTema></div></td></tr>";
+	}
+	tabla+="</table>";
+	console.log(d.items.length);
+	
+	
+	
+	return tabla;
+	
+	// `d` is the original data object for the row
+	/*a='<img class="tableDetallesImagen" id="imagenPrev"'+
+	'src="../img/'+d.imagen+'" alt="vista previa de imagen"></img>';
+    return a+'<div class="tableDetallesInf"><table cellpadding="5" cellspacing="0" border="0" style="padding-left:50px;">'+
+        '<tr>'+
+            '<td>Fecha de nacimiento:</td>'+
+            '<td>'+d.fechanac+'</td>'+
+        '</tr>'+
+        '<tr>'+
+            '<td>fechareg:</td>'+
+             '<td>'+d.fechareg+'</td>'+
+        '</tr>'+
+		'<tr>'+
+            '<td>fechahab:</td>'+
+             '<td>'+d.fechahab+'</td>'+
+        '</tr>'+
+    '</table></div>';*/
+}
+ 
+$(document).ready(function() {
+    var table = $('#lista').DataTable( {
+        "ajax": "admTemas.txt",
+        "columns": [
+            {
+                "class":          'details-control',
+                "orderable":      false,
+                "data":           null,
+                "defaultContent": ''
+            },
+			// prueba
+			{ "data": "nombreTema" },
+            { "data": "modificadoPor" },
+            { "data": "fechaModificacion" },
+			{ "data": "ordenTema" },
+			{
+                "orderable":      false,
+                "data":           "idTema",
+                "defaultContent": ''
+            },
+			{
+                "orderable":      false,
+                "data":           "idTema",
+                "defaultContent": ''
+            }
+			/**/
+			
+            /*{ "data": "name" },
+            { "data": "position" },
+            { "data": "office" },
+            { "data": "salary" }*/
+        ],
+		"order": [[1, 'asc']],
+			"language": {
+			"url": "../js/dataTableSpanish.json"
+		},
+		"lengthMenu": [[10, 25, 50, -1], [10, 25, 50, "Todos"]],
+		 dom: 'RTClfrtip', //para cambiar el orden de las columnas
+		 
+		columnDefs:  //controla ancho de columnas
+        [    
+			{ 
+				width: 10, 
+				targets: 0
+			}
+			,
+			
+			//cambiar orden tema
+			{
+                "render": function ( data, type, row )
+				{
+					aux="<div class=arriba id="+data+"></div>";
+					aux+="<div class=abajo id="+data+"></div>";
+					return aux;
+                },
+                "targets": 5
+            }
+			,
+			{ 
+				width: 20, 
+				targets: 5
+			},
+			
+			//eliminar
+			{
+                "render": function ( data, type, row )
+				{
+			
+					aux="<div class=eliminarTema id="+data+"></div>";
+					return aux;
+                },
+                "targets": 6
+            },
+			{ 
+				width: 10, 
+				targets: 6
+			},
+			
+			/*,
+			{
+                "render": function ( data, type, row )
+				{
+
+					
+					aux='<select><option value="-1">Eliminar</option>';
+					aux=aux+'<option value="'+data+'" selected="selected">'+row.descperfil+'</option>';
+					if(data!=0)
+						aux=aux+'<option value="0">No Habilitado</option>';
+					if(data!=1)
+						aux=aux+'<option value="1">Alumno</option>';
+					if(data!=2)
+						aux=aux+'<option value="2">Profesor</option>';
+					return aux;
+                },
+                "targets": 5
+            }*/
+        ],
+		//table tools - opciones de guardado
+			tableTools: {
+             "sSwfPath": "../js/copy_csv_xls_pdf.swf",
+			"aButtons": [ 
+				//"print",
+				{
+                    "sExtends": "copy",
+                    "sButtonText": "Copiar"
+                },
+				{
+                    "sExtends": "print",
+					"sInfo": "Presione Escape cuando finalize",
+                    "sButtonText": "Imprimir",
+                    "bShowAll": false,
+                },
+				{
+                    "sExtends": "pdf",
+					"sAction": "flash_pdf",
+					"sTitle": "My title",
+                    "sPdfMessage": "Your custom message would go here."
+                },
+                {
+                    "sExtends": "xls",
+                    "oSelectorOpts": {
+                        page: 'current'
+                    }
+                }
+
+			]
+        },
+		"colVis": {
+            "buttonText": "Ocultar/Mostrar columnas"
+        }
+
+		
+    } );
+     
+    // Add event listener for opening and closing details
+    $('#lista tbody').on('click', 'td.details-control', function () {
+        var tr = $(this).closest('tr');
+        var row = table.row( tr );
+ 
+        if ( row.child.isShown() ) {
+            // This row is already open - close it
+            row.child.hide();
+            tr.removeClass('shown');
+        }
+        else {
+            // Open this row
+            row.child( format(row.data()) ).show();
+            tr.addClass('shown');
+        }
+    } );
+	
+	
+
+
+	
+} );
+
+// previsualizar manda una pop up con el argumento
+$(".previsualizar").click(function(){
+  // Holds the product ID of the clicked element
+  var productId = $(this).attr('class').replace('addproduct ', '');
+
+  addToCart(productId);
+});
+
+</script> 
+<script type="text/javascript" src="../js/jquery-ui.js"></script>
+<script type="text/javascript" src="../js/ui.datepicker-es.js"></script>
+<script>
+$(function() {
+$( "#calendario" ).datepicker();
+});
+</script> 
+</html>

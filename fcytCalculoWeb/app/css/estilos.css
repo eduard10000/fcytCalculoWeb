@@ -1,0 +1,440 @@
+@charset "utf-8";
+/* CSS Document */
+/*----- generales -----*/
+/*----- header -----*/
+
+/*@media screen and (max-device-width: 1024px) {
+}*/
+
+header
+{
+	width:97.5%;
+	display:block;
+	height:6.5em;
+	background-image:url(../img/header.png);
+	background-size:100% 100%;
+	float:left;
+}
+
+#headerAdjust
+{
+	width:2.5%;
+	display:block;
+	height:6.5em;
+	background-image:url(../img/headerAdjust.png);
+	float:left;
+}
+
+#menuIzq, #menuDer, #central 
+{
+	height:44em;
+}
+
+#menuIzq, #menuDer /* menues izquierdo y derecho*/
+{
+	float:left;
+	min-width:8em;
+	width:15.94%;
+	max-width:20em;
+	display:block;
+	background-color:#4D76A2;
+	border-style:solid;
+	border-color:#000;
+	border-width:2px 2px 0px 2px;
+}
+
+#menuIzq a
+{
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	background-color: #4D76A2;
+	color:#FFFFFF;
+	text-decoration: none;
+	text-align: left;
+	white-space:nowrap;
+	padding-left:5%;
+	display:block;
+	float:right;
+	width:86%;
+	-webkit-transition: background-color 1s, color 1s; /* For Safari 3.1 to 6.0 */
+	transition: background-color 1s, color 1s;
+}
+
+#menuIzq a:hover
+{
+	background-color: #FFFFFF;
+	color:#4D76A2;
+}
+
+.menuIzqOpciones
+{
+	margin-top:3.5em;
+	margin-left:0.5em;
+}
+
+.menuIzqOpciones img
+{
+	width:0.87em;
+	height:0.87em;
+}
+
+.menuIzqOpciones div
+{
+	margin-top:0.75em;
+}
+
+#iniciarSesion
+{
+	background-color:#FFF;
+	margin-left:-0.5em;
+	padding-left:0.5em;
+	padding-top:0.5em;
+	padding-bottom:0.75em;
+}
+
+#iniciarSesion p
+{
+	font-size:110%;
+}
+
+#iniciarSesion button
+{
+	margin-left:5.8em;
+	margin-top: 1em;
+}
+
+/*----------------------------------------------------------------------------*/
+/*  aclaracion y boton de aclaracion */
+
+ .aclaracion
+{
+	display: block;
+	font-size: 16px;
+	font-style: normal;
+	background-color: #FFF;
+	color: #000;
+	border: 1px solid rgb(170, 170, 170);
+	margin:1.65% 2% 2% 2%;
+	width:96%;
+
+}
+
+.aclaracionBoton
+{
+	text-align:right;
+	margin-right:2%;
+	
+}
+
+/*----------------------------------------------------------------------------*/
+
+
+/*----- central -----*/
+#central /* section media de la pagina */
+{
+	float:left;
+	min-width:42.5em;
+	width:67.541%;;
+	display:block;
+	background-color: #CCCCCC;
+	border-style:solid;
+	border-color:#000;
+	border-width:2px 0px 0px 0px;
+}
+
+@media screen and (max-device-width: 1366px) {
+	#central /* section media de la pagina */
+	{
+		min-width:42.5em;
+		width:67.511%;
+	}
+}
+
+.titulo
+{
+	font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+	font-size: 26px;
+	font-weight:bold;
+	margin:2% 2% 0% 2%;
+	background-color: #A4BAD2;
+	width:96%;
+	border:none;
+	text-align:center;
+}
+
+/*----- footer -----*/
+footer
+{
+	background-color:#4D76A2;
+	width:99.7%;
+	height:5em;
+	clear:both;
+	border-style:solid;
+	border-color:#000;
+	border-width:2px;
+}
+
+/*----- inicio.html -----*/
+
+.inicioResenia
+{
+	background-color: #FFFFFF;
+	width:96%;
+	border:none;
+	float:left;
+	margin-top:4%;
+	margin-left:2%;
+	margin-right:2%;
+}
+
+.inicioReseniaTexto
+{
+	font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+	font-size: 20px;
+	font-weight:italic;
+	line-height: 2em;
+	word-spacing: 0.4em;
+	width:51.8%;
+	text-align:center;
+	float:left;
+	padding:1.75em;
+	height:15.7em;
+}
+
+.inicioReseniaImagen
+{
+	margin-top:2%;
+	width:40%;
+	height:24em;
+	background-image:url(../img/fcyt.png);
+	float:left;
+	background-size: 100% 100%;
+}
+
+/*-------------------------------------- registro.html--------------------------------------*/
+
+.registro
+{
+	margin:2%;
+	width:96%;
+	display:block;
+	height:30em;
+	
+}
+
+.formularioRegistro
+{
+	float:left;
+	min-width:16em;
+	width:50%;
+	max-width:100em;
+	padding:1em;
+	background-color:#FFF;
+}
+
+.formularioRegistro div
+{
+	min-width:8em;
+	width:30%;
+	float:left;
+}
+
+.formularioRegistro input
+{
+	width:50%;
+	max-width:20em;
+	margin-left:5%;
+	margin-bottom:1.5em;
+}
+
+.formularioRegistro input[type="file"]
+{
+	max-width:6.5em;;
+	margin-left:2%;
+}
+
+.formularioRegistro img
+{
+	max-width:5em;
+	margin-left:5%;
+}
+
+.formularioRegistro input[type="submit"]
+{
+	max-width:15em;
+	margin-left:15%;
+}
+
+/*----------------------- registro.html > tooltip----------------------------*/
+.ui-tooltip{
+min-width:10em;
+max-width:200em;
+width: 30%;
+background:   #ED670E;
+border: 2px solid #E9620A;
+padding: 5px 10px;
+color: white;
+border-radius: 10px;
+font: bold 10px "Helvetica Neue", Sans-Serif;
+box-shadow: 0 0 7px black;
+}
+
+/*----------------------- registro.html > validation----------------------------*/
+.formularioRegistro input[type]:valid {
+    color: green;
+}
+
+.formularioRegistro input[type]:invalid {
+    color: red;
+}
+
+#samePass
+{
+	color:#F00;
+	padding:0.25em;
+	padding-top:0em;
+}
+
+
+/*----------------------- registro.html > registro correcto----------------------------*/
+.registroCorrecto
+{
+	width:96%;
+	background-color:#FFF;
+	margin:2%;
+	display:block;
+	height:18em;
+}
+
+.registroCorrecto .texto
+{
+	width:60%;
+	float:left;
+	padding:1.5em 2em 2em 2em;
+	font-size:2em;
+	font-style: italic;
+	text-align: justify;
+	letter-spacing: 3px;
+	line-height: 150%;
+	text-shadow: 1px 1px #DDD;
+
+}
+
+.registroCorrecto .imagen
+{
+	width:11.55em;
+	display:block;
+	height:6.5em;
+	padding-top:2em;
+	padding-right:2em;
+	float:right;
+}
+
+
+/*----------------------- recuperar contraseña.html----------------------------*/
+.recuperarContrasenia
+{
+	width:80%;
+	background-color:#FFF;
+	margin:2% 10%;
+	display:block;
+	height:15em;
+}
+
+.recuperarContrasenia .texto
+{
+	width:88%;
+	padding:1.5em 2em 2em 2em;
+	font-size:1.3em;
+	font-style: italic;
+	text-align: center;
+	letter-spacing: 3px;
+}
+
+.recuperarContrasenia .formulario
+{
+	display:block;
+	margin:1em 43% 1em 43%;
+}
+
+.recuperarContrasenia input[type="text"]
+{
+	display:block;
+}
+
+.recuperarContrasenia button
+{
+	display:block;
+	margin:1em 2.95em;
+}
+
+/*-------------------------------------alumno.html---------------------------------------*/
+
+#infUsuario
+{
+	display:block;
+	background-color:#A4BAD2;
+	height:8em;
+	width:100%;
+}
+
+#cerrarSesion
+{
+	padding:0.95em 0em;
+	margin-left: 2.6em;
+	margin-right:3em;
+}
+
+#infUsuario img
+{
+	width:3.5em;
+	margin-left:1em;
+	border-color:#FFF;
+	border-style:solid;
+	border-width:1px;
+}
+
+#infUsuario .apellido
+{
+	float:right;
+	display:block;
+	width:6em;
+	padding-right:1.5em;	
+}
+
+#infUsuario .apellido a
+{
+	display:block;
+	text-decoration: none;
+	text-align: left;
+	color:#FFFFFF;
+	width:100%;
+	-webkit-transition: background-color 1s, color 1s; /* For Safari 3.1 to 6.0 */
+	transition: background-color 1s, color 1s;
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	padding-left:15%;
+	border:1px solid;
+	border-radius:15px;	
+	border-color:#A4BAD2;
+}
+
+#infUsuario .apellido a:hover
+{
+	background-color: #FFFFFF;
+	color:#4D76A2;
+}
+
+#calendario
+{
+	margin-top:1em;
+}
+
+#infEvento
+{
+	background-color: #A4BAD2;
+	border: 1px solid rgb(170, 170, 170);
+	text-align:center;
+	color:#FFF;
+	margin:0em 0.3em;
+	border:1.5px solid;
+	border-radius:5px;
+}

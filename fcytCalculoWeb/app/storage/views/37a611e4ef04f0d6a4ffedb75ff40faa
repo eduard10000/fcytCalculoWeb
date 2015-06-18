@@ -1,0 +1,157 @@
+
+<?php $__env->startSection('content'); ?>
+
+	<button onclick="fullCentral(this);">Expandir contenido</button>
+	<div class="titulo"> 
+    	Perfil
+	</div>
+    <div class="aclaracionBoton">
+ 		<button name=""  onclick="mostrarOcultar('aclaracion');">Aclaraciones</button>
+	</div>
+	<div id="aclaracion" class="aclaracion" style="display:none">
+		<ul>
+			<li>Los Campos obligatorios, salvo la imagen</li>
+			<li>La imagen no debe exceder los 4 MB</li>
+		</ul>
+	</div>
+<!--    patrones
+"-" \x2d
+" " \20
+"." \x2d
+"_" \x5f
+"dd/mm/yyyy" "(0[1-9]|[12][0-9]|3[01])[- /.](0[1-9]|1[012])[- /.](19|20)\d\d" -->
+    <div class="registro">
+        <div class="formularioRegistro">
+            <form id="formPerfil" method="post"   enctype="multipart/form-data" accept-charset="utf-8">
+                <div>Dni</div>
+                <input id="dni" value="<?php echo $persona->dni; ?>" name="dni" title="Ingrese su DNI" type="text" readonly><br/>
+                <div>Contraseña</div>
+                <input id="contrasenia" placeholder="" value="" type="password"  name="contrasenia" title="La contraseña debe tener al menos 6 caracteres y puede contener letras, números, '_','-', o '.' " pattern="[A-Za-z\x2d\x2e\x5f]{6,}" onKeyup="samePass();" onChange="samePass();"><br/>
+                <div>Repetir Contraseña</div>
+                <input id="repetir" type="password"  placeholder="" value=""  name="repetir" title="Repita la contraseña ingreses previamente" pattern="[A-Za-z\x2d\x2e\x5f]{6,}" onChange="samePass();" onKeyup="samePass();"><br/>
+                <p id="samePass" style="display:none">Las contraseñas no concuerdan</p>
+                <div>E-mail</div>
+                <input id="correo" value="<?php echo $persona->email; ?>" type="email" name="correo" title="Ingrese su e-mail" required><br/>
+                <div>Apellido</div>
+                <input id="apellido" value="<?php echo $persona->apellido; ?>" type="text" name="apellido" title="Ingrese su apellido" required  pattern="[A-Za-z\s]{1,}"><br/>
+                <div>Nombre</div>
+                <input id="nombre" value="<?php echo $persona->nombre; ?>" type="text" name="nombre" title="Ingrese su nombre" required pattern="[A-Za-z\s]{1,}"><br/>
+                <div>Fecha de Nacimiento</div>
+                <input id="fecha_nac" value="01/01/2014" type="date" name="fecha_nac" required pattern="(0[1-9]|[12][0-9]|3[01])[- /.](0[1-9]|1[012])[- /.](19|20)\d\d"><br/>
+                <div>Imagen</div> 
+                <img id="imagenPrev" src="img/imagenDefault.jpg" alt="vista previa de imagen">
+                <input type="file" name="imagen" id="archivo" accept="image/*" ><br/>
+                <input id="Aceptar_r" type="submit" name="bt_enviar" value="Guardar cambios">
+            </form>
+        </div>
+	</div>
+<?php $__env->stopSection(); ?>	
+
+<?php $__env->startSection('extra_script'); ?>
+<script type="text/javascript" src="js/jquery-2.0.2.js"></script>
+<script type="text/javascript" src="js/upload.js"></script>
+<script type="text/javascript" src="js/jquery-ui.js"></script>
+<script type="text/javascript" src="js/efectos.js"></script>
+<script type="text/javascript">
+	function subirArchivos() {
+		$("#archivo").upload('../subir_archivo.php',
+		{
+			nombre_archivo: $("#dni").val()
+		},
+		function(respuesta) { //si es 1 el archivo se subio y se movio a una carpeta temporal
+			//Subida finalizada.
+			cambiarImagen(respuesta);
+			
+		});
+	}
+	$(document).ready(function() {
+		$("#archivo").on('change', function() {
+		subirArchivos();
+		});
+	});
+	function cambiarImagen(nombre)
+	{
+		document.getElementById("imagenPrev").src="../img/temp/"+nombre;
+	}
+</script>
+<script>
+$(function() {
+var tooltips = $( "[title]" ).tooltip({
+position: {
+my: "right+600 top-4",
+at: "center top",
+using: function( position, feedback ) {
+$( this ).css( position );
+}
+}
+});
+/*$( "<button>" )
+.text( "Show help" )
+.button()
+.click(function() {
+tooltips.tooltip( "open" );
+})
+.insertAfter( "form" );*/
+}
+);
+</script>
+<!--script para la fecha de nacimiento -->
+<script src="../js/ui.datepicker-es.js"></script>
+<script>
+$(function() 
+{
+	$( "#fecha_nac" ).datepicker(
+	{
+		changeMonth: true,
+		changeYear: true,
+		yearRange: "c-80:c",
+	});
+});
+</script>
+<script>
+
+function samePass()
+{
+	if (document.getElementById('contrasenia').value.length>5 && document.getElementById('repetir').value.length>5)
+	{
+	if (document.getElementById('contrasenia').value != document.getElementById('repetir').value)
+	{
+		document.getElementById('samePass').style.display="block";
+		document.getElementById('contrasenia').setCustomValidity('Passwords must match.');
+		document.getElementById('repetir').setCustomValidity('Passwords must match.');
+	} 
+	else 
+	{
+		document.getElementById('samePass').style.display="none";
+		document.getElementById('contrasenia').setCustomValidity('');
+		document.getElementById('repetir').setCustomValidity('');
+	}
+	}
+}
+</script>
+
+<script>
+// this is the id of the form
+$(document).ready(function() { 
+	$("#formPerfil").submit(function() {
+
+		var url = "perfil"; // the script where you handle the form input.
+		
+		$.ajax({
+			   type: "POST",
+			   url: url,
+			   data: $("#formPerfil").serialize(), // serializes the form's elements.
+			   success: function(data)
+			   {
+				   alert(data); // show response from the php script.
+			   }
+			 });
+
+		return false; // avoid to execute the actual submit of the form.
+	});
+
+});
+</script>
+<?php $__env->stopSection(); ?>
+
+<?php echo $__env->make($layout, array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

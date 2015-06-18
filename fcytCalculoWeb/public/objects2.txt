@@ -1,0 +1,26 @@
+{
+  "data": [
+    {
+      "apellido": "Colliard Schneider",
+      "nombre": "Carlos David",
+      "email": "carloscolliard@gmail.com",
+      "perfil": "0",
+	  "descperfil": "No Habilitado",
+      "fechanac": "15 de Abril de 1991",
+      "imagen": "imagenDefault.jpg",
+	  "fechareg": "15:28 04/01/2014",
+	  "fechahab": "10:04 05/01/2014"
+    },
+	{
+      "apellido": "Giorgio",
+      "nombre": "Eduardo",
+      "email": "eduardogiorgio@gmail.com",
+      "perfil": "1",
+	  "descperfil": "Alumno",
+      "fechanac": "20 de Junio de 1990",
+      "imagen": "imagenDefault.jpg",
+	  "fechareg": "04:08 04/02/2014",
+	  "fechahab": "14:07 07/01/2014"
+    }
+  ]
+}

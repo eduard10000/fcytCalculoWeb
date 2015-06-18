@@ -1,0 +1,801 @@
+﻿@charset "utf-8";
+/* CSS Document */
+/*----- generales -----*/
+/*----- header -----*/
+
+/*@media screen and (max-device-width: 1024px) {
+}*/
+
+header
+{
+	width:95%;
+	display:block;
+	height:6.5em;
+	background-image:url(../img/header.png);
+	background-size:100% 100%;
+	float:left;
+}
+
+#headerAdjust
+{
+	width:5%;
+	display:block;
+	height:6.5em;
+	background-image:url(../img/headerAdjust.png);
+	float:left;
+}
+
+#menuIzq, #menuDer, #central 
+{
+	height:44em;
+}
+
+@media screen and (min-device-height: 1080px) {
+#menuIzq, #menuDer, #central 
+{
+	height:51.5em;
+}
+
+}
+
+#menuIzq, #menuDer /* menues izquierdo y derecho*/
+{
+	float:left;
+	min-width:8em;
+	width:16%;
+	max-width:20em;
+	display:block;
+	background-color:#4D76A2;
+}
+
+#menuIzq a
+{
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	background-color: #4D76A2;
+	color:#FFFFFF;
+	text-decoration: none;
+	text-align: left;
+	white-space:nowrap;
+	padding-left:5%;
+	display:block;
+	float:right;
+	width:86%;
+	-webkit-transition: background-color 1s, color 1s; /* For Safari 3.1 to 6.0 */
+	transition: background-color 1s, color 1s;
+}
+
+#menuIzq a:hover
+{
+	background-color: #FFFFFF;
+	color:#4D76A2;
+}
+
+.menuIzqOpciones
+{
+	margin-top:3.5em;
+	margin-left:0.5em;
+}
+
+.menuIzqOpciones img
+{
+	width:0.87em;
+	height:0.87em;
+}
+
+.menuIzqOpciones div
+{
+	margin-top:0.75em;
+}
+
+#iniciarSesion
+{
+	background-color:#FFF;
+	margin-left:-0.5em;
+	padding-left:0.5em;
+	padding-top:0.5em;
+	padding-bottom:0.75em;
+}
+
+#iniciarSesion p
+{
+	font-size:110%;
+}
+
+#iniciarSesion button
+{
+	margin-left:5.8em;
+	margin-top: 1em;
+}
+
+/*----------------------------------------------------------------------------*/
+/*  aclaracion y boton de aclaracion */
+
+ .aclaracion
+{
+	display: block;
+	font-size: 16px;
+	font-style: normal;
+	background-color: #FFF;
+	color: #000;
+	border: 1px solid rgb(170, 170, 170);
+	margin:1.65% 2% 2% 2%;
+	width:96%;
+
+}
+
+.aclaracionBoton
+{
+	text-align:right;
+	margin-right:2%;
+	
+}
+
+/*----------------------------------------------------------------------------*/
+
+
+/*----- central -----*/
+#central /* section media de la pagina */
+{
+	float:left;
+	min-width:42.5em;
+	width:68%;;
+	display:block;
+	background-color: #CCCCCC;
+	overflow:auto;
+}
+
+
+
+.titulo
+{
+	font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+	font-size: 26px;
+	font-weight:bold;
+	margin:2% 2% 0% 2%;
+	background-color: #A4BAD2;
+	width:96%;
+	border:none;
+	text-align:center;
+}
+
+/*----- footer -----*/
+footer
+{
+	background-color:#4D76A2;
+	width:100%;
+	height:5em;
+	clear:both;
+}
+
+/*----- inicio.html -----*/
+
+.inicioResenia
+{
+	background-color: #FFFFFF;
+	width:96%;
+	border:none;
+	float:left;
+	margin-top:4%;
+	margin-left:2%;
+	margin-right:2%;
+}
+
+.inicioReseniaTexto
+{
+	font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+	font-size: 20px;
+	font-weight:italic;
+	line-height: 2em;
+	word-spacing: 0.4em;
+	width:51.8%;
+	text-align:center;
+	float:left;
+	padding:1.75em;
+	height:15.7em;
+}
+
+.inicioReseniaImagen
+{
+	margin-top:2%;
+	width:40%;
+	height:24em;
+	background-image:url(../img/fcyt.png);
+	float:left;
+	background-size: 100% 100%;
+}
+
+/*-------------------------------------- registro.html--------------------------------------*/
+
+.registro
+{
+	margin:2%;
+	width:96%;
+	display:block;
+	height:30em;
+	
+}
+
+.formularioRegistro
+{
+	float:left;
+	min-width:16em;
+	width:50%;
+	max-width:100em;
+	padding:1em;
+	background-color:#FFF;
+}
+
+.formularioRegistro div
+{
+	min-width:8em;
+	width:30%;
+	float:left;
+}
+
+.formularioRegistro input
+{
+	width:50%;
+	max-width:20em;
+	margin-left:5%;
+	margin-bottom:1.5em;
+}
+
+.formularioRegistro input[type="file"]
+{
+	max-width:6.5em;;
+	margin-left:2%;
+}
+
+.formularioRegistro img
+{
+	max-width:5em;
+	margin-left:5%;
+}
+
+.formularioRegistro input[type="submit"]
+{
+	max-width:15em;
+	margin-left:15%;
+}
+
+/*----------------------- registro.html > tooltip----------------------------*/
+.ui-tooltip{
+min-width:10em;
+max-width:200em;
+width: 30%;
+background:   #ED670E;
+border: 2px solid #E9620A;
+padding: 5px 10px;
+color: white;
+border-radius: 10px;
+font: bold 10px "Helvetica Neue", Sans-Serif;
+box-shadow: 0 0 7px black;
+}
+
+/*----------------------- registro.html > validation----------------------------*/
+.formularioRegistro input[type]:valid {
+    color: green;
+}
+
+.formularioRegistro input[type]:invalid {
+    color: red;
+}
+
+#samePass
+{
+	color:#F00;
+	padding:0.25em;
+	padding-top:0em;
+}
+
+
+/*----------------------- registro.html > registro correcto----------------------------*/
+.registroCorrecto
+{
+	width:96%;
+	background-color:#FFF;
+	margin:2%;
+	display:block;
+	height:18em;
+}
+
+.registroCorrecto .texto
+{
+	width:60%;
+	float:left;
+	padding:1.5em 2em 2em 2em;
+	font-size:2em;
+	font-style: italic;
+	text-align: justify;
+	letter-spacing: 3px;
+	line-height: 150%;
+	text-shadow: 1px 1px #DDD;
+
+}
+
+.registroCorrecto .imagen
+{
+	width:11.55em;
+	display:block;
+	height:6.5em;
+	padding-top:2em;
+	padding-right:2em;
+	float:right;
+}
+
+
+/*----------------------- recuperar contraseña.html----------------------------*/
+.recuperarContrasenia
+{
+	width:80%;
+	background-color:#FFF;
+	margin:2% 10%;
+	display:block;
+	height:15em;
+}
+
+.recuperarContrasenia .texto
+{
+	width:88%;
+	padding:1.5em 2em 2em 2em;
+	font-size:1.3em;
+	font-style: italic;
+	text-align: center;
+	letter-spacing: 3px;
+}
+
+.recuperarContrasenia .formulario
+{
+	display:block;
+	margin:1em 43% 1em 43%;
+}
+
+.recuperarContrasenia input[type="text"]
+{
+	display:block;
+}
+
+.recuperarContrasenia button
+{
+	display:block;
+	margin:1em 2.95em;
+}
+
+/*-------------------------------------alumno.html---------------------------------------*/
+
+#infUsuario
+{
+	display:block;
+	background-color:#A4BAD2;
+	height:8em;
+	width:100%;
+}
+
+#cerrarSesion
+{
+	padding:0.95em 0em;
+	margin-left: 2.6em;
+	margin-right:3em;
+}
+
+#infUsuario img
+{
+	width:3.5em;
+	margin-left:1em;
+	border-color:#FFF;
+	border-style:solid;
+	border-width:1px;
+}
+
+#infUsuario .apellido
+{
+	float:right;
+	display:block;
+	width:6em;
+	padding-right:1.5em;	
+}
+
+#infUsuario .apellido a
+{
+	display:block;
+	text-decoration: none;
+	text-align: left;
+	color:#FFFFFF;
+	width:100%;
+	-webkit-transition: background-color 1s, color 1s; /* For Safari 3.1 to 6.0 */
+	transition: background-color 1s, color 1s;
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	padding-left:15%;
+	border:1px solid;
+	border-radius:15px;	
+	border-color:#A4BAD2;
+}
+
+#infUsuario .apellido a:hover
+{
+	background-color: #FFFFFF;
+	color:#4D76A2;
+}
+
+#calendario
+{
+	margin-top:1em;
+}
+
+@media screen and (min-device-width: 1900px) {
+#calendario
+{
+	font-size:1.42em !important;
+	
+}
+}
+
+#infEvento
+{
+	background-color: #A4BAD2;
+	border: 1px solid rgb(170, 170, 170);
+	text-align:center;
+	color:#FFF;
+	margin:0em 0.3em;
+	border:1.5px solid;
+	border-radius:5px;
+}
+
+#ultUsuariosCon
+{
+	background-color: #A4BAD2;
+	text-align:center;
+	color:#FFF;
+	margin:1em 0.3em 0em 0.3em;
+	border-top:1.5px  solid;
+	border-radius:5px 5px 0px 0px;
+}
+
+#ultUsuariosConLista
+{
+	text-align:center;
+	color:#FFF;
+	margin:0em 0.3em;
+	border-bottom:1.5px  solid;
+	border-radius:0px 0px 5px 5px;
+	padding: 1em 0em;
+}
+
+/*------------- profesor.html -> menu izquierdo--------------------------*/
+
+.menuIzqOpcionesAdm
+{
+	background-color: #A4BAD2;
+	border: 1px solid rgb(170, 170, 170);
+	text-align:center;
+	color:#FFF;
+	border:1.5px solid;
+	margin-top:1em;
+	font-size:1.25em;
+}
+
+.menuIzqOpcionesAdm  + .menuIzqOpciones
+{
+	margin-top:0em;
+}
+
+
+/*------------- profesor.html -> menu derecho--------------------------*/
+
+.menuusuariosnuevos
+{
+	margin-top:1em;
+	background-color:#76BD1D;
+	color:#FFFFFF;
+	text-decoration: none;
+	text-align:center;
+	display: block;
+	font-size: 18px;
+	padding:1em 0em;
+}
+
+
+
+/*------------- administracion de usuarios--------------------------*/
+.dataTables_wrapper
+{
+	margin:2% 2% 0% 2%;
+	width:96%;
+
+}
+
+.dataTables_wrapper thead, .dataTables_wrapper th
+{
+	background-color:#4D76A2 !important;
+	color:#FFF;
+
+}
+
+
+.dataTables_wrapper .tableDetallesImagen
+{
+	max-width:6em;
+	margin-left:5%;
+	float:left;
+}
+.dataTables_wrapper .tableDetallesInf
+{
+	float:left;
+}
+
+
+
+/*#ocultarColList
+{
+    margin:2% 2% 0% 2%;
+}
+
+.toggle-vis {
+    cursor: pointer;
+    color: #3174C7;
+    text-decoration: none;
+}*/
+
+/*------------- administracion de eventos--------------------------*/
+
+.guardarCambiosEventos
+{ 
+	margin-left:5em;
+	margin-top:2em;
+}
+
+#addRow
+{ 
+	margin-left:2em;
+	position:relative;
+	top:1.5em;
+}
+
+/*------------- crear temas--------------------------*/
+
+.crearTema
+{ 
+	margin: 2% 2% 0%;
+	width: 96%;
+	position:relative;
+	top:1.5em;
+	background-color:#FFF;
+	height:25em;
+}
+
+.crearTema form div, .crearTema form input, .crearTema form select
+{ 
+	
+	margin-bottom:1em;
+}
+
+
+.crearTema form div
+{ 
+	padding-left:2em;
+	min-width:8em;
+	width:20em;
+	float:left;
+}
+
+.crearTema form input
+{ 
+	width:50%;
+	max-width:20em;
+	margin-bottom:1.5em;
+}
+
+.crearNuevoTema
+{ 
+	width: 100em !important;
+}
+
+.crearTema form input[type="submit"]
+{ 
+	float:none;
+	width:10em;
+	margin-left:5em;
+}
+
+#dragandrophandler, #dragandrophandler2
+{
+border:2px solid #0B85A1 !important;
+width:450px;
+color:#92AAB0;
+text-align:left;vertical-align:middle;
+padding:0.75em 10px 0.75em 1em;
+margin-bottom:10px;
+font-size:200%;
+margin-top:1em;
+margin-left:1em;
+background-color:#76BD1D;
+color:#FFF;
+}
+
+.progressBar {
+    width: 200px;
+    height: 22px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+    display:inline-block;
+    margin:0px 10px 5px 5px;
+    vertical-align:top;
+}
+ 
+.progressBar div {
+    height: 100%;
+    color: #fff;
+    text-align: right;
+    line-height: 22px; /* same as #progressBar height if we want text middle aligned */
+    width: 0;
+    background-color: #0ba1b5; border-radius: 3px;
+}
+
+.statusbar
+{
+    border-top:1px solid #A9CCD1;
+    min-height:25px;
+    width:700px;
+    padding:10px 10px 0px 10px;
+    vertical-align:top;
+}
+
+.statusbar:nth-child(odd){
+    background:#EBEFF0;
+}
+
+.filename
+{
+display:inline-block;
+vertical-align:top;
+width:250px;
+}
+
+.filesize
+{
+display:inline-block;
+vertical-align:top;
+color:#30693D;
+width:100px;
+margin-left:10px;
+margin-right:5px;
+}
+
+.abort
+{
+    background-color:#A8352F;
+    -moz-border-radius:4px;
+    -webkit-border-radius:4px;
+    border-radius:4px;display:inline-block;
+    color:#fff;
+    font-family:arial;font-size:13px;font-weight:normal;
+    padding:4px 15px;
+    cursor:pointer;
+    vertical-align:top;
+	display:inline!important;
+	width:35px;
+	position:relative;
+	top:5px;
+}
+
+/*------------- administrar temas--------------------------*/
+.temaAntes, .temaDespues, .eliminarTema, .previsualizar, .editarTema, .guardarTema, .itemAntes, .itemDespues, .eliminarItem, .editarItem, .moverItem, .guardarItem
+{
+	background-repeat:no-repeat;
+	width:1.12em;
+	height:1.5em;
+	float:left;
+	cursor:pointer;
+}
+
+.temaAntes, .itemAntes
+{
+	background-image:url(../img/arriba.png);
+}
+
+.temaDespues, .itemDespues
+{
+	background-image:url(../img/abajo.png);
+}
+
+.editarTema, .editarItem
+{
+	background-image:url(../img/editar.png);
+}
+
+.guardarTema, .guardarItem
+{
+	background-image:url(../img/guardar.png);
+}
+
+.eliminarTema, .eliminarItem
+{
+	background-image:url(../img/eliminar.png);
+}
+
+.admItemsTemas
+{
+	margin-bottom:1em;
+}
+
+.admItemsTemas th
+{
+	background-color:#A4BAD2;
+}
+
+/*.moverItem
+{
+	background-image:url(../img/mover.png);
+}*/
+
+.previsualizar
+{
+	background-image:url(../img/play.png);
+}
+
+#addTema
+{
+	margin:1.5em;
+}
+
+#crearTema, #crearItem , #crearRecursos
+{
+	margin:1.5em;
+	display:none;
+}
+
+#nT td .temaAntes, #nT td .temaDespues, #nT td .editarTema, #nT td .eliminarTema,
+.primerTema td .temaAntes,
+.primerItem td .itemAntes, 
+.ultimoTema td .temaDespues,
+.ultimoItem td .itemDespues,
+#itemPapelera td .temaAntes, #itemPapelera td .temaDespues, #itemPapelera td .editarTema, #itemPapelera td .eliminarTema,
+.sinOrden td .itemAntes, .sinOrden td .itemDespues
+{
+	opacity: 0.15;
+	cursor:default;
+}
+
+/*------------- temas--------------------------*/
+
+
+#menuTemasItems {  text-align: center;
+font-size: 0.7em;
+width: 100%;
+margin: 15px auto;
+}
+#menuTemasItems ul { list-style-type: none;}
+#menuTemasItems ul li.nivel1 { float: left;
+width: 162px;
+margin-right: 2px;
+}
+#menuTemasItems ul li a {display: block;
+text-decoration: none;
+color: #fff;
+background-color: #399;
+border: solid 1px #fff;
+padding: 8px;
+position: relative;
+}
+#menuTemasItems ul li:hover {position: relative;
+}
+#menuTemasItems ul li a:hover, #menuTemasItems ul li:hover a.nivel1 {background-color: #6CC;
+color: #000;
+position: relative;
+}
+#menuTemasItems ul li a.nivel1 {display: block!important;display: none;
+position: relative;
+}
+#menuTemasItems ul li ul {display: none;
+}
+#menuTemasItems ul li a:hover ul, #menuTemasItems ul li:hover ul {display: block;
+position: absolute;left: 0px;
+}
+#menuTemasItems ul li ul li a {width: 160px;
+padding: 6px 0px 8px 0px;
+border-top-color: #000;
+}
+#menuTemasItems ul li ul li a:hover {border-top-color: #000;
+position: relative;
+}

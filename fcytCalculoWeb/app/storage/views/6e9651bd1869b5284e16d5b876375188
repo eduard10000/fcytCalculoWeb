@@ -1,0 +1,18 @@
+
+<?php $__env->startSection('content'); ?>
+	<button onclick="fullCentral(this);">Expandir contenido</button>
+	<div class="titulo"> 
+    	Registro Correcto
+	</div>
+	<div class="registroCorrecto">
+    	<div class="texto">
+        Su usuario esta en uso por favor contacte con el administrador o prueba con recuperar contraseña
+        </div>
+        <div class="imagen">
+        	<img src="img/registroCorrecto.png" alt="registro correcto">
+        </div>
+    </div>
+<?php $__env->stopSection(); ?>
+<?php $__env->startSection('extra_script'); ?>
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('layouts.userNormal', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

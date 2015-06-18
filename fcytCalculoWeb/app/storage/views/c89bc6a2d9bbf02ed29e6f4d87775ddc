@@ -1,0 +1,77 @@
+
+<?php $__env->startSection('content'); ?>
+	<button onclick="fullCentral(this);">Expandir contenido</button>
+	<div class="titulo"> 
+    	Temas
+	</div>
+
+<div id="menuTemasItems">
+<ul>
+  <li class="nivel1"><a href="#" class="nivel1">Opción 1</a>
+	<ul>
+		<li><a href="#">Opción 1.1</a></li>
+		<li><a href="http://www.idplus.org">idplus.org</a></li>
+	</ul>
+  </li>
+  <li class="nivel1"><a href="#" class="nivel1">Opción 2</a>
+	<ul>
+		<li><a href="#">Opción 2.1</a></li>
+		<li><a href="#">Opción 2.2</a></li>
+		<li><a href="#">Opción 2.3</a></li>
+		<li><a href="#">Opción 2.4</a></li>
+		<li><a href="http://www.idplus.org">idplus.org</a></li>
+	</ul>
+</li>
+  <li class="nivel1"><a href="#" class="nivel1">Opción 3</a>
+	<ul>
+		<li><a href="#">Opción 3.1</a></li>
+		<li><a href="#">Opción 3.2</a></li>
+		<li><a href="http://www.idplus.org">idplus.org</a></li>
+	</ul>
+</li>
+  <li class="nivel1"><a href="#" class="nivel1">Opción 4</a>
+	<ul>
+		<li><a href="#">Opción 4.1</a></li>
+		<li><a href="#">Opción 4.2</a></li>
+		<li><a href="#">Opción 4.3</a></li>
+		<li><a href="http://www.idplus.org">idplus.org</a></li>
+	</ul>
+</li>
+  <li class="nivel1"><a href="#" class="nivel1">Opción 5</a>
+	<ul>
+		<li><a href="#">Opción 5.1</a></li>
+		<li><a href="#">Opción 5.2</a></li>
+		<li><a href="http://www.idplus.org">idplus.org</a></li>
+	</ul>
+</li>
+</ul>
+</div>
+
+<?php $__env->stopSection(); ?>
+
+<?php $__env->startSection('extra_script'); ?>
+<link rel="stylesheet" media="screen" href="css/estilos.css">
+<link rel="stylesheet" media="screen" href="css/jquery-ui.css" >
+<script type="text/javascript" src="js/jquery-ui.js"></script>
+<script type="text/javascript" src="js/ui.datepicker-es.js"></script>
+<script type="text/javascript">
+$('#menuTemasItems').on( 'click', function () {
+		$.post( "getListaTemasItems",{},function( resultado )
+			{
+			
+			
+			
+			
+				for(i = 0; i < resultado.length; i++)
+				{
+					var op = document.createElement("OPTION"); 
+					op.value=resultado[i].idTema;
+					op.text=resultado[i].contenido;
+					document.getElementById('listaTemas').appendChild(op);
+				}
+			}, "json");
+} );
+</script>
+<?php $__env->stopSection(); ?>
+
+<?php echo $__env->make($layout, array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

@@ -1,0 +1,73 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Plataforma virtual de CDeI - Inicio</title>
+<link rel="stylesheet" media="screen" href="css/estilos.css">
+</head>
+<body>
+<div id="headerAdjust"></div>
+<header>
+</header>
+
+<aside id="menuIzq">
+	<div class="menuIzqOpciones">
+    	<div>
+        	<img src="img/<?php if($seleccionado==1) echo 'circuloverde.png"'; else echo 'circulocolor.png"'; ?>  alt="activado">
+			<a href="home"> Inicio</a>
+        </div>
+        <div>
+			<img src="img/circulocolor.png" alt="desactivado">	
+		   	<a  href="javascript:mostrarOcultar('iniciarSesion');"> Iniciar Sesión</a>
+            <div id="iniciarSesion" style="display:none" >
+                <p>Usuario:</p>
+                <input size="21" type="text" name="ingresoUsuario" id="ingresoUsuario" placeholder="Ingrese su usuario">
+                <p>Contraseña:</p>
+                <input size="21" type="password" name="ingresocontrasenia" id="ingresocontrasenia" placeholder="Ingrese su Contraseña" >
+                <button id="ingresar">Ingresar</button>
+            </div>
+        </div>
+        <div>
+			<img src="img/<?php if($seleccionado==3) echo 'circuloverde.png"'; else echo 'circulocolor.png"'; ?>  alt="activado">
+        	<a href="registro"> Registrarse</a>
+        </div>
+        <div>
+        	<img src="img/<?php if($seleccionado==4) echo 'circuloverde.png"'; else echo 'circulocolor.png"'; ?>  alt="activado">
+        	<a href="recuperarContrasenia"> Recuperar contraseña</a>
+        </div>
+    </div>
+</aside>
+
+<section id="central">
+	<?php echo $__env->yieldContent('content'); ?>
+ </section>
+
+<aside id="menuDer">
+</aside>
+
+
+<footer>
+</footer>
+
+</body>
+
+
+<script type="text/javascript" src="js/efectos.js"></script>
+
+<?php echo $__env->yieldContent('extra_script'); ?>
+<script>
+
+
+$( "#ingresar" ).click(function() {
+$.post( "ingresar",{ ingresoUsuario: $("#ingresoUsuario").val(), 
+	ingresocontrasenia: $("#ingresocontrasenia").val() 
+	},function( data ) {
+alert( data ); 
+
+}, "json");
+	
+	
+
+});
+</script>	
+</html>
